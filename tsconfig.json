@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		// "noImplicitAny": false, //不指定类型时不会报错
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"allowJs": true,
