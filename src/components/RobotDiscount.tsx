@@ -7,7 +7,7 @@ interface RobotProps {
 	name: string;
 	email: string;
 }
-const Robot: React.FC<RobotProps> = (props) => {
+const RobotDiscount: React.FC<RobotProps> = (props) => {
 	const { id, name, email } = props;
 	const value = useContext(appContext);
 	const setState = useContext(appSetStateContext);
@@ -25,6 +25,7 @@ const Robot: React.FC<RobotProps> = (props) => {
 	return (
 		<div className={styles.cardContainer}>
 			<img src={`https://robohash.org/${id}`} alt="robot" />
+			<h2>打折商品</h2>
 			<h2>{`${id}-${name}`}</h2>
 			<p>{email}</p>
 			<p>作者：{value.username}</p>
@@ -32,4 +33,4 @@ const Robot: React.FC<RobotProps> = (props) => {
 		</div>
 	);
 };
-export default Robot;
+export default RobotDiscount;
